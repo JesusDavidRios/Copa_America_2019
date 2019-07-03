@@ -13,8 +13,8 @@ import java.util.List;
 public class UserFacadeImpl implements UserFacade {
     @Autowired
     private UserService userService;
-    /*@Autowired
-    private BCryptPasswordEncoder encoder;*/
+    @Autowired
+    private BCryptPasswordEncoder encoder;
     @Override
     public List<UserModel> listAll() {
         return this.userService.listAll();
@@ -26,13 +26,12 @@ public class UserFacadeImpl implements UserFacade {
     }
 
     @Override
-    public UserModel create(int id, String name, String pass, String level) {
+    public UserModel create(long id, String username, String pass, String level) {
         UserModel userModel = new UserModel();
         userModel.setId(id);
-        userModel.setName(name);
-        userModel.setPassword(pass);
-        //userModel.setPassword(encoder.encode(pass));
-        userModel.setLevel(level);
+        userModel.setUsername(username);
+        //userModel.setPassword(pass);
+        userModel.setPassword(encoder.encode(pass));
         return this.userService.save(userModel);
     }
 }

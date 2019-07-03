@@ -8,6 +8,7 @@ public interface Constants {
         String USER = "user";
         String PLAYERDTO = "playerDto";
         String LOGIN = "login";
+        String INDEX = "index";
     }
 
 

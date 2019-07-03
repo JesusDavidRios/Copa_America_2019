@@ -1,11 +1,9 @@
 package com.project.controller;
 
 import com.project.Constants;
-import com.project.dao.UserDao;
 import com.project.facade.UserFacade;
 import com.project.model.UserModel;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,10 +15,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class UserController {
     @Autowired
     private UserFacade userFacade;
-
-    /*@Autowired
-    private BCryptPasswordEncoder encoder;
-    */
 
    /* @Autowired
     private UserModel userModel;

@@ -10,5 +10,5 @@ public interface UserFacade {
     List<UserModel> listAll();
 
     UserModel findById(int id);
-    UserModel create(int id, String name, String pass, String level);
+    UserModel create(long id, String username, String pass, String level);
 }
