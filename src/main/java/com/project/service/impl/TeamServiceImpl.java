@@ -1,6 +1,6 @@
 package com.project.service.impl;
 
-import com.project.dao.team.TeamDao;
+import com.project.dao.TeamDao;
 import com.project.model.TeamModel;
 import com.project.service.TeamService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,5 +22,10 @@ public class TeamServiceImpl implements TeamService {
     @Override
     public List<TeamModel> findByName(String name) {
         return teamDao.findByName(name);
+    }
+
+    @Override
+    public TeamModel getOne(int id) {
+        return teamDao.getOne(id);
     }
 }

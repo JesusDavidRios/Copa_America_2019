@@ -1,6 +1,7 @@
 package com.project.controller;
 
 import com.project.Constants;
+import com.project.dto.PlayerDto;
 import com.project.facade.PlayerFacade;
 import com.project.facade.TeamFacade;
 import com.project.model.PlayerModel;
@@ -22,6 +23,8 @@ public class PlayerController {
     // llamados a facades
     @Autowired
     private PlayerFacade playerFacade;
+    @Autowired
+    private PlayerDto playerDto;
 
     @RequestMapping("/greeting")
     public String greeting(@RequestParam(name = "name", required = false, defaultValue = "World") String name, Model model,
@@ -50,6 +53,20 @@ public class PlayerController {
         model.addAttribute("player", list);
         model.addAttribute("name", "Jesus");
         return Constants.Templates.PLAYER;
+    }
+
+    @RequestMapping(value = "/id/{id}", method = RequestMethod.GET)
+    public String updateTeamPlayer(Model model, @PathVariable int id)
+    {
+        //DTO
+        /*
+        metodo updateTeamPlayer debe devolver DTO (1)
+        playerDTO agregarlo al modelo
+         */
+        final PlayerDto playerDtoRTA = playerFacade.showTeamPlayer(id);
+        model.addAttribute("player", playerDtoRTA);
+        model.addAttribute("name", "Jesus");
+        return Constants.Templates.PLAYERDTO;
     }
 
     @RequestMapping("/find")

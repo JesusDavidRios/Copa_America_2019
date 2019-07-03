@@ -1,4 +1,4 @@
-package com.project.dao.team;
+package com.project.dao;
 
 import com.project.model.PlayerModel;
 import org.springframework.data.jpa.repository.JpaRepository;

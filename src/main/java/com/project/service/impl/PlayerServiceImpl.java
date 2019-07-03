@@ -1,6 +1,6 @@
 package com.project.service.impl;
 
-import com.project.dao.team.PlayerDao;
+import com.project.dao.PlayerDao;
 import com.project.model.PlayerModel;
 import com.project.service.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,4 +30,6 @@ public class PlayerServiceImpl implements PlayerService {
     public PlayerModel save(PlayerModel entity) {
         return playerDao.save(entity);
     }
+
+
 }

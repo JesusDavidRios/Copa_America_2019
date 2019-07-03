@@ -7,11 +7,15 @@
 <body>
 <p th:text="'Hello, ' + ${name} + '!'"/>
 
+
 <table>
-    <th:block th:each="t : ${team}">
+    <th:block th:each="p : ${player}">
         <tr>
-            <td th:text="${t.id}"></td>
-            <td th:text="${t.name}"></td>
+            <td th:text="${p.name}"></td>
+            <td th:text="${p.last_name}"></td>
+            <td th:text="${p.teamName}"></td>
+            <td th:text="${p.club}"></td>
+            <td th:text="${p.position}"></td>
         </tr>
     </th:block>
 </table>

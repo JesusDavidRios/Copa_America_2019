@@ -20,11 +20,6 @@ public class TeamFacadeImpl implements TeamFacade {
         return teamService.listAll();
     }
 
-    @Override
-    public List<TeamModel> listTeamPlayer() {
-
-        return null;
-    }
 
     @Override
     public List<TeamModel> findByName(String name) {

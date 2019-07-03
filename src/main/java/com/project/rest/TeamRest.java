@@ -1,7 +1,7 @@
 package com.project.rest;
 
 import com.project.model.TeamModel;
-import com.project.dao.team.TeamDao;
+import com.project.dao.TeamDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

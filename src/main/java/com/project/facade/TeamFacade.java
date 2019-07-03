@@ -8,7 +8,5 @@ public interface TeamFacade {
 
     List<TeamModel> listAll();
 
-    List<TeamModel> listTeamPlayer();
-
     List<TeamModel> findByName(String name);
 }
