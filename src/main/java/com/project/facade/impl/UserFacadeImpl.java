@@ -13,6 +13,8 @@ import java.util.List;
 public class UserFacadeImpl implements UserFacade {
     @Autowired
     private UserService userService;
+    /*@Autowired
+    private BCryptPasswordEncoder encoder;*/
     @Override
     public List<UserModel> listAll() {
         return this.userService.listAll();
